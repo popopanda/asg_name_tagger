@@ -158,9 +158,8 @@ func setAWSTag(instanceID, instanceRegion, hostname string) {
 		},
 	}
 
-	result, err := svc.CreateTags(input)
+	_, err := svc.CreateTags(input)
 	fmt.Println("Tagging EC2 Instance...")
-	fmt.Println(result)
 	errHandle(err)
 }
 
