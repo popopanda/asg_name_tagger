@@ -13,7 +13,7 @@ import (
 )
 
 func main() {
-	instanceID, instanceRegion, ipAddr, err := retrieveInstanceMeta()
+	instanceID, instanceRegion, _, err := retrieveInstanceMeta()
 	errHandle(err)
 	tags := aws.StringValueMap(getTags(instanceID, instanceRegion))
 
