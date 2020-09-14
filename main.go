@@ -21,14 +21,10 @@ func main() {
 
 	if isASG(tags) {
 		fmt.Printf("Hostname: %v\n\n", parsedHostname)
-		setHostname(parsedHostname)
-		fileWriter(ipAddr, parsedHostname)
 		setAWSTag(instanceID, instanceRegion, parsedHostname)
 
 	} else {
 		fmt.Printf("Hostname: %v\n\n", parsedHostname)
-		setHostname(parsedHostname)
-		fileWriter(ipAddr, parsedHostname)
 	}
 }
 
